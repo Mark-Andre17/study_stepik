@@ -59,7 +59,7 @@ def return_boolean(my_list):
 
 
 # задание 8 На входе строка, вернуть строку где каждый символ исходной строки повторяется три раза.
-#
+
 def paper_doll(string):
     new_list = []
     for i in string:
@@ -78,4 +78,4 @@ def blackjack(*arg):
     elif sum(arg) <= 21:
         return sum(arg)
     else:
-        return 'Buzz'
+        return 'BUST'

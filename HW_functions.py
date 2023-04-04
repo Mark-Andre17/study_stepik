@@ -1,5 +1,7 @@
 # задание 1 "Меньшее из двух чётных чисел": Напишите функцию, которая возвращает меньшее из двух чисел, *если* оба
 # эти числа чётные. Иначе возвращает большее из двух чисел, если одно или оба числа нечётные.
+
+
 def get_some_number(a, b):
     new_list = [a, b]
     if new_list[0] % 2 == 0 and new_list[1] % 2 == 0:
@@ -79,3 +81,36 @@ def blackjack(*arg):
         return sum(arg)
     else:
         return 'BUST'
+
+
+# задание 10 Вернуть сумму чисел в массиве, кроме набора чисел который начинается с 6 и продолжается до 9 (для
+# каждого числа 6 далее где-то будет число 9). Вернуть 0 если чисел нет.
+
+
+def summer_69(some_list):
+    start_index = 0
+    end_index = 0
+    for i, n in enumerate(some_list):
+        if n == 6:
+            start_index = i
+        elif n == 9:
+            end_index = i + 1
+    del some_list[start_index:end_index]
+    return sum(some_list)
+
+
+# задание 11 Напишите функцию, которая берёт список чисел, и возвращает True, если в списке содержатся числа 0 0 7 в
+# указанном порядке.
+
+def spy_game(some_list):
+    spy_list = [0, 0, 7]
+    for elem in some_list:
+        if elem == spy_list[0]:
+            spy_list = spy_list[1:]
+        if len(spy_list) == 0:
+            return True
+    return False
+
+
+
+# задание 12 Напишите функцию, которая возвращает *количество* простых чисел, которые меньше или равны указанному числу.

@@ -112,5 +112,19 @@ def spy_game(some_list):
     return False
 
 
-
 # задание 12 Напишите функцию, которая возвращает *количество* простых чисел, которые меньше или равны указанному числу.
+def simple_numbers(num):
+    number = list(range(num + 1))
+    number[1] = 0
+    number_list = []
+    i = 2
+    while i <= num:
+        if number[i] != 0:
+            number_list.append(number[i])
+            for j in range(i, num + 1, i):
+                number[j] = 0
+        i += 1
+    return len(number_list)
+
+
+

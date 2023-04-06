@@ -149,3 +149,18 @@ def get_divider(a, b):
     return f'максимальный делитель = {max(new_list)}\nВсе делители: {new_list}'
 
 
+# задание 15 Дано: список dict-объектов вида вида {"key": "value"}, например [{"key1": "value1"}, {"k1": "v1",
+# "k2": "v2", "k3": "v3"}, {}, {}, {"key1": "value1"}, {"key1": "value1"}, {"key2": "value2"}].
+#
+# Напишите функцию, которая удаляет дубликаты из этого списка. Для примера выше возвращаемое значение может быть
+# равно [{"key1": "value1"}, {"k1": "v1", "k2": "v2", "k3": "v3"}, {}, {"key2": "value2"}]. Обязательное условие:
+# функция не должна иметь сложность O(n^2).
+
+def delete_duplicates(some_list):
+    new_list = []
+    for i in some_list:
+        if i not in new_list:
+            new_list.append(i)
+    return new_list
+
+

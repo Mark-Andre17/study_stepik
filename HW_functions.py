@@ -136,3 +136,16 @@ def print_big(letter):
                 'E': [4, 9, 4, 9, 4]}
     for pattern in alphabet[letter.upper()]:
         print(patterns[pattern])
+
+
+# задание 14 Найти больший делитель для 2 чисел
+
+def get_divider(a, b):
+    my_list = [i for i in range(1, a + b)]
+    new_list = []
+    for num in my_list:
+        if a % num == 0 and b % num == 0:
+            new_list.append(num)
+    return f'максимальный делитель = {max(new_list)}\nВсе делители: {new_list}'
+
+

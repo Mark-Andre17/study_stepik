@@ -12,9 +12,10 @@ def vol(radius):
 # границы)
 
 def run_check(num, start, end):
-    for i in range(start, end + 1):
-        if num == i:
-            return f'{num} находится в диапазоне от {start} до {end}'
+    if num in range(start, end + 1):
+        return f'{num} находится в диапазоне от {start} до {end}'
+    else:
+        return f'{num} вне диапазона'
 
 
 # Задание 3 Напишите функцию Python, которая принимает на вход строку, и вычисляет количество букв в верхнем регистре
@@ -66,5 +67,3 @@ def is_pangram(some_str, alphabet=string.ascii_lowercase):
         if letter in alphabet:
             my_counter += 1
     return my_counter == len(alphabet)
-
-

@@ -53,4 +53,18 @@ def palindrome(some_string):
     else:
         return False
 
-# Задание 7
+
+# Задание 7  Напишите функцию Python, которая проверяет, является ли строка панграммой или нет.
+import string
+
+
+def is_pangram(some_str, alphabet=string.ascii_lowercase):
+    new_str = some_str.replace(' ', '').replace(',', '').lower()
+    new_set = set(new_str)
+    my_counter = 0
+    for letter in new_set:
+        if letter in alphabet:
+            my_counter += 1
+    return my_counter == len(alphabet)
+
+
